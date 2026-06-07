@@ -5,6 +5,7 @@ function Star(props) {
     <button
       className="star"
       type="button"
+      disabled={props.disabled}
       onClick={props.onClick}
       aria-label={props.selected ? "Selected star" : "Unselected star"}
     >

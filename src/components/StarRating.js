@@ -11,6 +11,7 @@ function StarRating(props) {
           <Star
             key={star}
             selected={star <= rating}
+            disabled={props.isDialogOpen}
             onClick={() => setRating(star)}
           />
         ))}

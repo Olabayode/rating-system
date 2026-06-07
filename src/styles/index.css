@@ -1,23 +1,91 @@
 @charset "utf-8";
 @import "./reset.css";
 
+body {
+  background-color: #06254a;
+}
+
+.app {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 700px;
+  padding: 24px;
+}
+
+h2{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
 .star-rating {
   display: grid;
-  gap: 12px;
+  gap: 20px;
   justify-items: center;
-  padding: 40px;
 }
 
 .stars {
   display: flex;
-  gap: 8px;
+  gap: 14px;
 }
 
 .star {
   background: none;
   border: 0;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 72px;
   line-height: 1;
   padding: 0;
+}
+
+.star:disabled {
+  cursor: default;
+}
+
+.dialog-section {
+  bottom: 24px;
+  position: fixed;
+  right: 24px;
+  z-index: 2;
+}
+
+button {
+  background-color: #182dee;
+  border: 1px solid #249fd0;
+  border-radius: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 35px;
+  font-weight: 600;
+  padding: 16px 24px;
+  position: relative;
+  z-index: 3;
+}
+
+.dialog-overlay {
+  align-items: center;
+  background-color: rgba(6, 37, 74, 0.82);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.dialog-box {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #1f4f78;
+  border-radius: 6px;
+  color: #1f4f78;
+  display: flex;
+  font-size: 48px;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  width: 40%;
+  height: 40%;
 }
