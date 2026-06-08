@@ -6,8 +6,12 @@ function App() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const ratingLabels = ["", "Poor", "Fair", "Good", "Very Good", "Excellent"];
 
-  function toggleDialog() {
-    setIsDialogOpen(!isDialogOpen);
+  function openDialog() {
+    setIsDialogOpen(true);
+  }
+
+  function closeDialog() {
+    setIsDialogOpen(false);
   }
 
   return (
@@ -16,7 +20,11 @@ function App() {
         ratingLabels={ratingLabels}
         isDialogOpen={isDialogOpen}
       />
-      <Dialog isDialogOpen={isDialogOpen} onClick={toggleDialog} />
+      <Dialog
+        isDialogOpen={isDialogOpen}
+        onOpen={openDialog}
+        onClose={closeDialog}
+      />
     </main>
   );
 }
